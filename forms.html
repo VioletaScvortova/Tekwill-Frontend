@@ -54,8 +54,33 @@
             <input class="input-field" type="date" id="birthday" name="birthday">
         </div>
     </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Address Information</legend>
+        <div class="form-row">
+            <label for="message">Street Address:</label>
+            <textarea name="message" rows="2" cols="15"></textarea>
+        </div>
+        <div class="form-row">
+        <label for="countries">Country:</label>
+  <select name="countries" id="countries">
+    <option value="spain">Spain</option>
+    <option value="portugal">Portugal</option>
+    <option value="italy">Italy</option>
+    <option value="france">France</option>
+  </select>
+        </div>
+        <div class="form-row">
+            <label for="fname">City:</label>
+            <input class="input-field" type="text" id="fname" name="fname" value="">
+        </div>
+            <div class="form-row">
+            <label for="quantity">Postal code:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10">
+        </div>
+    </fieldset>
+    
     </form>
-
 </body>
 
 </html>
