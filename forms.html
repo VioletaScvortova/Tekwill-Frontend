@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .form-row {
+            margin-bottom: 8px;
+        }
+
+        .input-field {
+            margin-bottom: 3px;
+        }
+
+        .gender-label {
+            margin-left: 0.8px;
+            margin-right: 7px;
+        }
+
+        .password-label {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Basic User Information</legend>
+        <div class="form-row">
+            <label for="fname">Full name:</label>
+            <input class="input-field" type="text" id="fname" name="fname" value="">
+        </div>
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input class="input-field" type="email" id="email" name="email">
+        </div>
+
+        <div class="form-row">
+            <label for="pwd">Password:</label>
+            <input class="input-field" type="password" id="pwd" name="pwd">
+            <label class="password-label" for="pwd">Confirm password:</label>
+            <input class="input-field" type="password" id="pwd" name="pwd"><br>
+        </div>
+        <div class="form-row">
+            <label for="pwd">Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label class="gender-label" for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label class="gender-label" for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label class="gender-label" for="other">Other</label>
+        </div>
+        <div class="form-row">
+            <label for="birthday">Day of Birth:</label>
+            <input class="input-field" type="date" id="birthday" name="birthday">
+        </div>
+    </fieldset>
+    </form>
+
+</body>
+
+</html>
