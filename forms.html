@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
+    <title></title>
     <style>
         .form-row {
             margin-bottom: 8px;
@@ -37,8 +38,8 @@
         <div class="form-row">
             <label for="pwd">Password:</label>
             <input class="input-field" type="password" id="pwd" name="pwd" required placeholder="Password">
-            <label class="password-label" for="pwd">Confirm password:</label>
-            <input class="input-field" type="password" id="pwd" name="pwd"><br>
+            <label class="password-label" for="confirm-pwd">Confirm password:</label>
+            <input class="input-field" type="password" id="confirm-pwd" name="confirm-pwd"><br>
         </div>
         <div class="form-row">
             <label for="pwd">Gender:</label>
@@ -58,8 +59,8 @@
     <fieldset>
         <legend>Address Information</legend>
         <div class="form-row">
-            <label for="message">Street Address:</label>
-            <textarea name="message" rows="2" cols="15"></textarea>
+            <label for="address">Street Address:</label>
+            <textarea id="address" rows="2" cols="15"></textarea>
         </div>
         <div class="form-row">
             <label for="countries">Country:</label>
@@ -72,7 +73,7 @@
         </div>
         <div class="form-row">
             <label for="fname">City:</label>
-            <input class="input-field" type="text" id="fname" name="fname" value="">
+            <input class="input-field" type="text" id="city" name="city" value="">
         </div>
         <div class="form-row">
             <label for="quantity">Postal code:</label>
@@ -110,8 +111,8 @@
             </select>
         </div>
         <div class="form-row">
-            <label for="message">Feedback/Comments:</label>
-            <textarea name="message" rows="2" cols="26"></textarea>
+            <label for="feedback">Feedback/Comments:</label>
+            <textarea id="feedback" rows="2" cols="26"></textarea>
         </div>
     </fieldset>
     <br><br>
@@ -121,19 +122,21 @@
             <label for="myfile">Upload a Profile Picture:</label>
             <input type="file" id="myfile" name="myfile" accept=".jpg, .jpeg, .png">
         </div>
+        <div class="form-row">
+        <label for="homepage">Add the website link:</label>
+        <input type="url" id="homepage" name="homepage">
     </fieldset>
     <br>
     <form id="myForm">
         <input type="submit" value="Submit" style="display: inline-block; margin-right: 15px;">
         <input type="button" onclick="myFunction()" value="Reset" style="display: inline-block;">
     </form>
-
     <script>
         function myFunction() {
             document.getElementById("myForm").reset();
         }
     </script>
-    </form>
+
 </body>
 
 </html>
