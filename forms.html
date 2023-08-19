@@ -19,43 +19,47 @@
         }
 
         .password-label {
-            margin-left: 10px; 
+            margin-left: 10px;
         }
-        .slidecontainer {
-  width: 100%;
-}
-.slider {
-  -webkit-appearance: none;
-  width: 13%;
-  height: 8px;
-  border-radius: 3px;
-  background: #ccccff;
-  outline: none;
-  opacity: 0.9;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
-}
-.slider:hover {
-  opacity: 1;
-}
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background: #0000e6;
-  cursor: pointer;
-}
 
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 20%;
-  background: #0000e6;
-  cursor: pointer;
-}
-    </style> 
+        .slidecontainer {
+            width: 100%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 13%;
+            height: 8px;
+            border-radius: 3px;
+            background: #ccccff;
+            outline: none;
+            opacity: 0.9;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background: #0000e6;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 20%;
+            background: #0000e6;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -158,26 +162,26 @@
             <input type="file" id="myfile" name="myfile" accept=".jpg, .jpeg, .png">
         </div>
         <div class="form-row">
-        <label for="homepage">Add the website link:</label>
-        <input type="url" id="homepage" name="homepage">
-        <div class="form-row">
-            <label for="experience">Experience level with HTML:</label>
-            <div class="slidecontainer">
-                <input type="range" min="1" max="10" value="7" class="slider" id="myRange">
-                <p>Value: <span id="demo"></p>
-              </div>
-              
-              <script>
-              var slider = document.getElementById("myRange");
-              var output = document.getElementById("demo");
-              output.innerHTML = slider.value;
-              
-              slider.oninput = function() {
-                output.innerHTML = this.value;
-              }
-              </script>
+            <label for="homepage">Add the website link:</label>
+            <input type="url" id="homepage" name="homepage">
+        </div>
+            <div class="form-row">
+                <label for="myRange">Experience level with HTML:</label>
+            </div>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="10" value="7" class="slider" id="myRange">
+                    <p>Value: <span id="demo"></span></p>
+                </div>
+                <script>
+                    var slider = document.getElementById("myRange");
+                    var output = document.getElementById("demo");
+                    output.innerHTML = slider.value;
 
-    </fieldset>
+                    slider.oninput = function () {
+                        output.innerHTML = this.value;
+                    }
+                </script>
+      </fieldset>
     <br>
     <form id="myForm">
         <input type="submit" value="Submit" style="display: inline-block; margin-right: 15px;">
