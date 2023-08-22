@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+
+        .form-row {
+            margin-bottom: 8px;
+        }
+
+        .input-field {
+            margin-bottom: 3px;
+        }
+
+        .gender-label {
+            margin-left: 0.8px;
+            margin-right: 7px;
+        }
+
+        .password-label {
+            margin-left: 10px;
+        }
+
+        .slidecontainer {
+            width: 100%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 13%;
+            height: 8px;
+            border-radius: 3px;
+            background: #ccccff;
+            outline: none;
+            opacity: 0.9;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background: #0000e6;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 20%;
+            background: #0000e6;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="/action_page.php" method="get">
+    <fieldset>
+        <legend>Basic User Information</legend>
+        <div class="form-row">
+            <label for="fname">Full name:</label>
+            <input class="input-field" type="text" id="fname" name="fname" required placeholder="Full name" value="">
+        </div>
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input class="input-field" type="email" id="email" name="email" required placeholder="Email"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+        </div>
+        <div class="form-row">
+            <label for="pwd">Password:</label>
+            <input class="input-field" type="password" id="pwd" name="pwd" required placeholder="Password">
+            <label class="password-label" for="confirm-pwd">Confirm password:</label>
+            <input class="input-field" type="password" id="confirm-pwd" name="confirm-pwd"><br>
+        </div>
+        <div class="form-row">
+            <label for="pwd">Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label class="gender-label" for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label class="gender-label" for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other">
+            <label class="gender-label" for="other">Other</label>
+        </div>
+        <div class="form-row">
+            <label for="birthday">Day of Birth:</label>
+            <input class="input-field" type="date" id="birthday" name="birthday">
+        </div>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Address Information</legend>
+        <div class="form-row">
+            <label for="address">Street Address:</label>
+            <textarea id="address" rows="2" cols="15"></textarea>
+        </div>
+        <div class="form-row">
+            <label for="countries">Country:</label>
+            <select name="countries" id="countries">
+                <option value="spain">Spain</option>
+                <option value="portugal">Portugal</option>
+                <option value="italy">Italy</option>
+                <option value="france">France</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="fname">City:</label>
+            <input class="input-field" type="text" id="city" name="city" value="">
+        </div>
+        <div class="form-row">
+            <label for="quantity">Postal code:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10">
+        </div>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Preferences</legend>
+        <div class="form-row">
+            <label for="pwd">Preferred Contact Method:</label>
+            <input type="checkbox" id="contact-option1" name="contact-option1" value="Email">
+            <label for="contact-option1">Email</label>
+            <input type="checkbox" id="contact-option2" name="contact-option2" value="Phone">
+            <label for="contact-option2">Phone</label>
+            <input type="checkbox" id="contact-option3" name="contact-option3" value="Postal Mail">
+            <label for="contact-option3">Postal Mail</label>
+        </div>
+        <div class="form-row">
+            <label for="favcolor">Favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#00e600">
+        </div>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Additional Details</legend>
+        <div class="form-row">
+            <label for="source">How did you hear about us?:</label>
+            <select name="source" id="source">
+                <option value="radio">Advertisement on Radio</option>
+                <option value="tv">Advertisement on TV</option>
+                <option value="internet">Internet</option>
+                <option value="friends">Friends</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="feedback">Feedback/Comments:</label>
+            <textarea id="feedback" rows="2" cols="26"></textarea>
+        </div>
+    </fieldset>
+    <br><br>
+    <fieldset>
+        <legend>Profile</legend>
+        <div class="form-row">
+            <label for="myfile">Upload a Profile Picture:</label>
+            <input type="file" id="myfile" name="myfile" accept=".jpg, .jpeg, .png">
+        </div>
+        <div class="form-row">
+            <label for="homepage">Add the website link:</label>
+            <input type="url" id="homepage" name="homepage">
+        </div>
+        <div class="form-row">
+            <label for="myRange">Experience level with HTML:</label>
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="7" class="slider" id="myRange">
+            <p>Value: <span id="demo"></span></p>
+        </div>
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function () {
+                output.innerHTML = this.value;
+            }
+        </script>
+ </fieldset>
+ <input type="submit" value="Submit">
+ <input type="reset" value="Reset">
+</form>
+</body>
+</html>

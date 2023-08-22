@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<div>
+    padding: 10px;
+    merging: 10px;</div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>W3.CSS</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .form-row {
+            margin-bottom: 8px;
+        }
+
+        .input-field {
+            margin-bottom: 3px;
+        }
+
+        .gender-label {
+            margin-left: 0.8px;
+            margin-right: 7px;
+        }
+
+        .password-label {
+            margin-left: 10px;
+        }
+
+        .slidecontainer {
+            width: 100%;
+        }
+
+    
+#round2 {
+  border: 3px solid #3CB371;
+  border-radius: 8px;
+  padding: 5px;
+  background-color:#FFF5EE;
+
+  .oblique-text {
+  font-weight: bold;
+            font-style: italic;}
+
+}
+.spaced-legend {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 19px; 
+}
+.w3-btn {width:150px;}
+
+
+body {
+  font-family: Geneva, Verdana, sans-serif ;
+  font-weight: bold;
+        }
+        body {
+
+}
+html {
+    box-sizing: border-box
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+
+</style>   
+</head>
+
+<body>
+    <form class="w3-container w3-card-4 w3-light-grey">
+        <form class="w3-container w3-card-4">
+    <fieldset id="round2";>
+        <legend class="oblique-text spaced-legend" style="color: #3CB371;">Basic User Information</legend>
+        <div class="form-row">
+            <label for="fname">Full name:</label><br>
+            <input class="input-field w3-input w3-border w3-round" type="text" id="fname" name="fname" required placeholder="" value="">
+        </div>
+        <div class="form-row ">
+            <label for="email">Email:</label><br>
+            <input class="input-field w3-input w3-border w3-round" type="email" id="email" name="email" required placeholder=""
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+        </div>
+        <div class="form-row">
+            <label for="pwd">Password:</label><br>
+            <input class="input-field w3-input w3-border w3-round" type="password" id="pwd" name="pwd" required placeholder=""><br>
+            <div class="form-row">
+                <label for="confirm-pwd">Confirm password:</label><br>
+                <input class="input-field w3-input w3-border w3-round" type="password" id="confirm-pwd" name="confirm-pwd" required placeholder=""><br>
+        </div>
+        <div class="form-row">
+            <label for="pwd">Gender:</label><br>
+        <input class="w3-radio" type="radio" id="male" name="gender" value="Male">
+            <label class="gender-label" for="male">Male</label>
+            <input class="w3-radio" type="radio" id="female" name="gender" value="Female">
+            <label class="gender-label" for="female">Female</label>
+            <input class="w3-radio" type="radio" id="other" name="gender" value="Other">
+            <label class="gender-label" for="other">Other</label>
+        </div>
+        <div class="form-row"><br>
+            <label for="birthday">Day of Birth:</label><br>
+            <input class="input-field w3-input w3-border w3-round" type="date" id="birthday" name="birthday">
+        </p>
+        </div>
+    </fieldset>
+    <br><br>
+    <fieldset id="round2">
+        <legend class="oblique-text spaced-legend" style="color: #3CB371;">Address Information</legend>
+        <div class="form-row">
+            <label for="address">Street Address:</label><br>
+            <textarea input class="input-field w3-input w3-border w3-round" id="address" rows="2" cols="15"></textarea>
+
+        </div>
+        <div class="form-row">
+            <label for="countries">Country:</label><br>
+            <select name="countries" id="countries" input class="input-field w3-input w3-border w3-round">
+                <option value="spain">Spain</option>
+                <option value="portugal">Portugal</option>
+                <option value="italy">Italy</option>
+                <option value="france">France</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="fname">City:</label><br>
+            <input class="input-field w3-input w3-border w3-round" type="text" id="city" name="city" value="">
+        </div>
+        <div class="form-row">
+            <label for="quantity">Postal code:</label><br>
+            <input class="input-field w3-input w3-border w3-round" input type="number" id="quantity" name="quantity" min="1" max="10">
+        </div>
+    </fieldset>
+    <br><br>
+    <fieldset id="round2">
+        <legend class="oblique-text spaced-legend" style="color: #3CB371;">Preferences</legend>
+        <div class="form-row">
+            <label for="pwd">Preferred Contact Method:</label><br>
+            <input class="w3-check" type="checkbox" id="contact-option1" name="contact-option1" value="Email">
+            <label for="contact-option1">Email</label>
+            <input class="w3-check" type="checkbox" id="contact-option2" name="contact-option2" value="Phone">
+            <label for="contact-option2">Phone</label>
+            <input class="w3-check" type="checkbox" id="contact-option3" name="contact-option3" value="Postal Mail">
+            <label for="contact-option3">Postal Mail</label>
+        </div>
+        <div class="form-row">
+            <label for="favcolor">Favorite color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#00e600">
+        </div>
+    </fieldset>
+    <br><br>
+    <fieldset id="round2">
+        <legend class="oblique-text spaced-legend" style="color: #3CB371;">Additional Details</legend>
+        <div class="form-row">
+            <label for="source">How did you hear about us?:</label><br>
+            <select name="source" id="source" input class="input-field w3-input w3-border w3-round">
+                <option value="radio">Advertisement on Radio</option>
+                <option value="tv">Advertisement on TV</option>
+                <option value="internet">Internet</option>
+                <option value="friends">Friends</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <label for="feedback">Feedback/Comments:</label><br>
+            <input class="input-field w3-input w3-border w3-round" textarea id="feedback" rows="2" cols="26"></textarea>
+        </div>
+    </fieldset>
+    <br><br>
+    <fieldset id="round2">
+        <legend class="oblique-text spaced-legend" style="color: #3CB371;">Profile</legend>
+        <div class="form-row">
+            <label for="myfile">Upload a Profile Picture:</label>
+            <input type="file" id="myfile" name="myfile" accept=".jpg, .jpeg, .png">
+        </div>
+        <div class="form-row">
+            <label for="homepage">Add the website link:</label><br>
+            <input class="input-field w3-input w3-border w3-round" input type="url" id="homepage" name="homepage">
+        </div>
+        <div class="form-row">
+            <label for="myRange">Experience level with HTML:</label>
+        </div>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="7" class="slider" id="myRange">
+            <p>Value: <span id="demo"></span></p>
+        </div>
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function () {
+                output.innerHTML = this.value;
+            }
+        </script>
+    </fieldset>
+    <br>
+        <form id="myForm">
+        <input type="submit" class="w3-button w3-round-xlarge" value="Submit" style="display: inline-block; margin-right: 15px; background-color: #3CB371;">
+        <input type="button" class="w3-button w3-round-xlarge" onclick="myFunction()" value="Reset" style="display: inline-block; background-color: #dedede;">
+        </form>
+    <script>
+        function myFunction() {
+            document.getElementById("myForm").reset();
+        }
+    </script>
+   <br><br>
+</body>
+<br><br>
+</html>
