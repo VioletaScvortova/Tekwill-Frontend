@@ -38,7 +38,7 @@
             font-weight: normal;
             border: 3px solid #fa6800;
             border-radius: 8px;
-            padding: 10;
+            padding: 0;
             margin: 0 auto;
             border-color: #1ea7af;
             background-color: #FFF5EE;
@@ -118,7 +118,7 @@
                 <input type="password" id="confirm-pwd" name="confirm-pwd" required placeholder=""><br>
             </div>
             <div class="form-row">
-                <label for="gender">Gender:</label><br>
+                <label>Gender:</label><br>
                 <input class="check" type="radio" id="male" name="gender" value="Male">
                 <label class="gender-label" for="male">Male</label>
                 <input class="check" type="radio" id="female" name="gender" value="Female">
@@ -164,11 +164,11 @@
             <div class="form-row">
                 <label>Preferred Contact Method:</label><br>
                 <input class="check" type="checkbox" id="contact-email" name="contact-option1" value="Email">
-                <label for="contact-option1">Email</label>
+                <label for="contact-email">Email</label>
                 <input class="check" type="checkbox" id="contact-phone" name="contact-option2" value="Phone">
-                <label for="contact-option2">Phone</label>
+                <label for="contact-phone">Phone</label>
                 <input class="check" type="checkbox" id="contact-post" name="contact-option3" value="Postal Mail">
-                <label for="contact-option3">Postal Mail</label><br>
+                <label for="contact-post">Postal Mail</label><br>
             </div>
             <div class="form-row">
                 <label class="nowidth" for="favcolor">Favorite color:</label>
@@ -223,10 +223,10 @@
                 }
             </script>
         </fieldset>
-        </div>
         <div>
-            <input type="submit" class="submit" value="Submit" />
-            <input type="reset" class="reset" value="Reset" />
+            <br>
+            <input type="submit" class="submit" value="Submit">
+            <input type="reset" class="reset" value="Reset">
         </div>
     </form>
 </body>
